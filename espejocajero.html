@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero Automático</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, blue, silver);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            filter: contrast(80%) brightness(90%);
+        }
+
+        #cajero {
+            width: 400px;
+            padding: 20px;
+            border: 3px solid #c5b6b6;
+            border-radius: 10px;
+            background: linear-gradient(to right, beige, rgb(116, 92, 92));
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .btn {
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .btn-primary {
+            background-color: #346497;
+            border-color: #326ead;
+        }
+
+        .btn-success {
+            background-color: #69b87b;
+            border-color: #317e43;
+        }
+
+        .btn-info {
+            background-color: #96adb1;
+            border-color: #17a2b8;
+        }
+
+        .btn-danger {
+            background-color: #8b484f;
+            border-color: #91444b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="cajero">
+        <h2>Cajero Automático</h2>
+
+        <label for="cuenta">Selecciona tu cuenta:</label>
+        <select id="cuenta">
+            <option value="Mali">Mali</option>
+            <option value="Gera">Gera</option>
+            <option value="Maui">Maui</option>
+        </select>
+
+        <br><br>
+
+        <div class="form-group">
+            <label for="password">Ingresa tu contraseña:</label>
+            <input type="password" id="password" placeholder="Contraseña" class="form-control">
+        </div>
+
+
+
+
+        <br><br>
+
+        <button onclick="autenticar()" class="btn btn-primary">Autenticar</button>
+        <button id="consultarSaldo" onclick="consultarSaldo()" style="display:none;"
+            class="btn btn-success btn-block">Consultar Saldo</button>
+        <button id="ingresarMonto" onclick="ingresarMonto()" style="display:none;"
+            class="btn btn-info btn-block">Ingresar Monto</button>
+        <button id="realizarRetiro" onclick="realizarRetiro()" style="display:none;"
+            class="btn btn-danger btn-block">Realizar Retiro</button>
+    </div>
+
+    <script src="./espejocajero.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
